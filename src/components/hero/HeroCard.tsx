@@ -1,13 +1,5 @@
 import { Link } from "react-router-dom";
-
-interface HeroCardProps {
-  id: String,
-  superhero: string,
-  publisher: string,
-  alter_ego: string,
-  first_appearance: string,
-  characters: string,
-}
+import { HeroCardProps } from "../../interfaces/hero";
 
 
 const HeroCard = ({
@@ -21,7 +13,7 @@ const HeroCard = ({
   const imagePath = `/assets/heroes/${id}.jpg`;
 
   return (
-    <div className="card mb-3" style={{ maxWidth: '540px' }}>
+    <div className="card mb-3 animate__animated animate__fadeIn" style={{ maxWidth: '540px' }}>
       <div className="row g-0">
         <div className="col-md-4">
           <img src={imagePath} className="img-fluid rounded-start" alt="..." />
